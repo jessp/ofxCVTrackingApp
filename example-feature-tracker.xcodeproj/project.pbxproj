@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		CA0AF7511970F4BF004CDE32 /* ofxAssimpAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0AF71D1970F4BE004CDE32 /* ofxAssimpAnimation.cpp */; };
+		CA0AF7521970F4BF004CDE32 /* ofxAssimpMeshHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0AF71F1970F4BE004CDE32 /* ofxAssimpMeshHelper.cpp */; };
+		CA0AF7531970F4BF004CDE32 /* ofxAssimpModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0AF7211970F4BE004CDE32 /* ofxAssimpModelLoader.cpp */; };
+		CA0AF7541970F4BF004CDE32 /* ofxAssimpTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0AF7231970F4BE004CDE32 /* ofxAssimpTexture.cpp */; };
+		CA0AF7551970F4BF004CDE32 /* assimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0AF7501970F4BF004CDE32 /* assimp.a */; };
 		CA2108C4196791F400D80677 /* ETF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA2108A9196791F400D80677 /* ETF.cpp */; };
 		CA2108C5196791F400D80677 /* fdog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA2108AA196791F400D80677 /* fdog.cpp */; };
 		CA2108C6196791F400D80677 /* Calibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA2108B9196791F400D80677 /* Calibration.cpp */; };
@@ -32,7 +37,6 @@
 		CA21097619679B1900D80677 /* PatternTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21096E19679B1900D80677 /* PatternTracker.cpp */; };
 		CA21097719679B1900D80677 /* ofxCvFeaturesTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21097319679B1900D80677 /* ofxCvFeaturesTracker.cpp */; };
 		CA4C3012196791220066B95D /* ofxCvCameraProjectorCalibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4C3010196791220066B95D /* ofxCvCameraProjectorCalibration.cpp */; };
-		CAED7E00196CE0E800EF5094 /* cameraparameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAED7DFD196CE0E800EF5094 /* cameraparameters.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -86,6 +90,52 @@
 
 /* Begin PBXFileReference section */
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		CA0AF71D1970F4BE004CDE32 /* ofxAssimpAnimation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAssimpAnimation.cpp; sourceTree = "<group>"; };
+		CA0AF71E1970F4BE004CDE32 /* ofxAssimpAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAssimpAnimation.h; sourceTree = "<group>"; };
+		CA0AF71F1970F4BE004CDE32 /* ofxAssimpMeshHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAssimpMeshHelper.cpp; sourceTree = "<group>"; };
+		CA0AF7201970F4BE004CDE32 /* ofxAssimpMeshHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAssimpMeshHelper.h; sourceTree = "<group>"; };
+		CA0AF7211970F4BE004CDE32 /* ofxAssimpModelLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAssimpModelLoader.cpp; sourceTree = "<group>"; };
+		CA0AF7221970F4BE004CDE32 /* ofxAssimpModelLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAssimpModelLoader.h; sourceTree = "<group>"; };
+		CA0AF7231970F4BE004CDE32 /* ofxAssimpTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAssimpTexture.cpp; sourceTree = "<group>"; };
+		CA0AF7241970F4BE004CDE32 /* ofxAssimpTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAssimpTexture.h; sourceTree = "<group>"; };
+		CA0AF7251970F4BE004CDE32 /* ofxAssimpUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAssimpUtils.h; sourceTree = "<group>"; };
+		CA0AF7291970F4BE004CDE32 /* aiAnim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiAnim.h; sourceTree = "<group>"; };
+		CA0AF72A1970F4BE004CDE32 /* aiAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiAssert.h; sourceTree = "<group>"; };
+		CA0AF72B1970F4BE004CDE32 /* aiCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiCamera.h; sourceTree = "<group>"; };
+		CA0AF72C1970F4BE004CDE32 /* aiColor4D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiColor4D.h; sourceTree = "<group>"; };
+		CA0AF72D1970F4BE004CDE32 /* aiColor4D.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = aiColor4D.inl; sourceTree = "<group>"; };
+		CA0AF72E1970F4BE004CDE32 /* aiConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiConfig.h; sourceTree = "<group>"; };
+		CA0AF72F1970F4BE004CDE32 /* aiDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiDefines.h; sourceTree = "<group>"; };
+		CA0AF7301970F4BE004CDE32 /* aiFileIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiFileIO.h; sourceTree = "<group>"; };
+		CA0AF7311970F4BE004CDE32 /* aiLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiLight.h; sourceTree = "<group>"; };
+		CA0AF7321970F4BE004CDE32 /* aiMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiMaterial.h; sourceTree = "<group>"; };
+		CA0AF7331970F4BE004CDE32 /* aiMaterial.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = aiMaterial.inl; sourceTree = "<group>"; };
+		CA0AF7341970F4BE004CDE32 /* aiMatrix3x3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiMatrix3x3.h; sourceTree = "<group>"; };
+		CA0AF7351970F4BE004CDE32 /* aiMatrix3x3.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = aiMatrix3x3.inl; sourceTree = "<group>"; };
+		CA0AF7361970F4BE004CDE32 /* aiMatrix4x4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiMatrix4x4.h; sourceTree = "<group>"; };
+		CA0AF7371970F4BE004CDE32 /* aiMatrix4x4.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = aiMatrix4x4.inl; sourceTree = "<group>"; };
+		CA0AF7381970F4BE004CDE32 /* aiMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiMesh.h; sourceTree = "<group>"; };
+		CA0AF7391970F4BE004CDE32 /* aiPostProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiPostProcess.h; sourceTree = "<group>"; };
+		CA0AF73A1970F4BE004CDE32 /* aiQuaternion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiQuaternion.h; sourceTree = "<group>"; };
+		CA0AF73B1970F4BE004CDE32 /* aiScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiScene.h; sourceTree = "<group>"; };
+		CA0AF73C1970F4BE004CDE32 /* aiTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiTexture.h; sourceTree = "<group>"; };
+		CA0AF73D1970F4BE004CDE32 /* aiTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiTypes.h; sourceTree = "<group>"; };
+		CA0AF73E1970F4BE004CDE32 /* aiVector2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiVector2D.h; sourceTree = "<group>"; };
+		CA0AF73F1970F4BE004CDE32 /* aiVector3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiVector3D.h; sourceTree = "<group>"; };
+		CA0AF7401970F4BE004CDE32 /* aiVector3D.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = aiVector3D.inl; sourceTree = "<group>"; };
+		CA0AF7411970F4BE004CDE32 /* aiVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiVersion.h; sourceTree = "<group>"; };
+		CA0AF7421970F4BE004CDE32 /* assimp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = assimp.h; sourceTree = "<group>"; };
+		CA0AF7431970F4BE004CDE32 /* assimp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = assimp.hpp; sourceTree = "<group>"; };
+		CA0AF7451970F4BE004CDE32 /* poppack1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = poppack1.h; sourceTree = "<group>"; };
+		CA0AF7461970F4BE004CDE32 /* pushpack1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pushpack1.h; sourceTree = "<group>"; };
+		CA0AF7471970F4BE004CDE32 /* DefaultLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultLogger.h; sourceTree = "<group>"; };
+		CA0AF7481970F4BE004CDE32 /* IOStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOStream.h; sourceTree = "<group>"; };
+		CA0AF7491970F4BE004CDE32 /* IOSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSystem.h; sourceTree = "<group>"; };
+		CA0AF74A1970F4BE004CDE32 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		CA0AF74B1970F4BE004CDE32 /* LogStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogStream.h; sourceTree = "<group>"; };
+		CA0AF74C1970F4BE004CDE32 /* NullLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NullLogger.h; sourceTree = "<group>"; };
+		CA0AF74D1970F4BE004CDE32 /* ProgressHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressHandler.h; sourceTree = "<group>"; };
+		CA0AF7501970F4BF004CDE32 /* assimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = assimp.a; sourceTree = "<group>"; };
 		CA21089E196791F400D80677 /* ofxCv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxCv.h; sourceTree = "<group>"; };
 		CA2108A0196791F400D80677 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA2108A4196791F400D80677 /* ETF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETF.h; sourceTree = "<group>"; };
@@ -225,9 +275,6 @@
 		CA21097519679B1900D80677 /* ofxCvFeaturesTrackerThreaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvFeaturesTrackerThreaded.h; sourceTree = "<group>"; };
 		CA4C3010196791220066B95D /* ofxCvCameraProjectorCalibration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvCameraProjectorCalibration.cpp; sourceTree = "<group>"; };
 		CA4C3011196791220066B95D /* ofxCvCameraProjectorCalibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxCvCameraProjectorCalibration.h; sourceTree = "<group>"; };
-		CAED7DFD196CE0E800EF5094 /* cameraparameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cameraparameters.cpp; sourceTree = SOURCE_ROOT; };
-		CAED7DFE196CE0E800EF5094 /* cameraparameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraparameters.h; sourceTree = SOURCE_ROOT; };
-		CAED7DFF196CE0E800EF5094 /* exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exports.h; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -274,6 +321,7 @@
 				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
 				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
+				CA0AF7551970F4BF004CDE32 /* assimp.a in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
 				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
@@ -286,6 +334,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				CA0AF71B1970F4BE004CDE32 /* ofxAssimpModelLoader */,
 				CA2108D11967920200D80677 /* ofxOpenCv */,
 				CA21089C196791F400D80677 /* ofxCv */,
 				CA4C300E196791220066B95D /* ofxCvCameraProjectorCalibration */,
@@ -321,6 +370,117 @@
 				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
 			);
 			name = "3rd party frameworks";
+			sourceTree = "<group>";
+		};
+		CA0AF71B1970F4BE004CDE32 /* ofxAssimpModelLoader */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF71C1970F4BE004CDE32 /* src */,
+				CA0AF7261970F4BE004CDE32 /* libs */,
+			);
+			name = ofxAssimpModelLoader;
+			sourceTree = "<group>";
+		};
+		CA0AF71C1970F4BE004CDE32 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF71D1970F4BE004CDE32 /* ofxAssimpAnimation.cpp */,
+				CA0AF71E1970F4BE004CDE32 /* ofxAssimpAnimation.h */,
+				CA0AF71F1970F4BE004CDE32 /* ofxAssimpMeshHelper.cpp */,
+				CA0AF7201970F4BE004CDE32 /* ofxAssimpMeshHelper.h */,
+				CA0AF7211970F4BE004CDE32 /* ofxAssimpModelLoader.cpp */,
+				CA0AF7221970F4BE004CDE32 /* ofxAssimpModelLoader.h */,
+				CA0AF7231970F4BE004CDE32 /* ofxAssimpTexture.cpp */,
+				CA0AF7241970F4BE004CDE32 /* ofxAssimpTexture.h */,
+				CA0AF7251970F4BE004CDE32 /* ofxAssimpUtils.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxAssimpModelLoader/src;
+			sourceTree = "<group>";
+		};
+		CA0AF7261970F4BE004CDE32 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF7271970F4BE004CDE32 /* assimp */,
+			);
+			name = libs;
+			path = ../../../addons/ofxAssimpModelLoader/libs;
+			sourceTree = "<group>";
+		};
+		CA0AF7271970F4BE004CDE32 /* assimp */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF7281970F4BE004CDE32 /* include */,
+				CA0AF74E1970F4BE004CDE32 /* lib */,
+			);
+			path = assimp;
+			sourceTree = "<group>";
+		};
+		CA0AF7281970F4BE004CDE32 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF7291970F4BE004CDE32 /* aiAnim.h */,
+				CA0AF72A1970F4BE004CDE32 /* aiAssert.h */,
+				CA0AF72B1970F4BE004CDE32 /* aiCamera.h */,
+				CA0AF72C1970F4BE004CDE32 /* aiColor4D.h */,
+				CA0AF72D1970F4BE004CDE32 /* aiColor4D.inl */,
+				CA0AF72E1970F4BE004CDE32 /* aiConfig.h */,
+				CA0AF72F1970F4BE004CDE32 /* aiDefines.h */,
+				CA0AF7301970F4BE004CDE32 /* aiFileIO.h */,
+				CA0AF7311970F4BE004CDE32 /* aiLight.h */,
+				CA0AF7321970F4BE004CDE32 /* aiMaterial.h */,
+				CA0AF7331970F4BE004CDE32 /* aiMaterial.inl */,
+				CA0AF7341970F4BE004CDE32 /* aiMatrix3x3.h */,
+				CA0AF7351970F4BE004CDE32 /* aiMatrix3x3.inl */,
+				CA0AF7361970F4BE004CDE32 /* aiMatrix4x4.h */,
+				CA0AF7371970F4BE004CDE32 /* aiMatrix4x4.inl */,
+				CA0AF7381970F4BE004CDE32 /* aiMesh.h */,
+				CA0AF7391970F4BE004CDE32 /* aiPostProcess.h */,
+				CA0AF73A1970F4BE004CDE32 /* aiQuaternion.h */,
+				CA0AF73B1970F4BE004CDE32 /* aiScene.h */,
+				CA0AF73C1970F4BE004CDE32 /* aiTexture.h */,
+				CA0AF73D1970F4BE004CDE32 /* aiTypes.h */,
+				CA0AF73E1970F4BE004CDE32 /* aiVector2D.h */,
+				CA0AF73F1970F4BE004CDE32 /* aiVector3D.h */,
+				CA0AF7401970F4BE004CDE32 /* aiVector3D.inl */,
+				CA0AF7411970F4BE004CDE32 /* aiVersion.h */,
+				CA0AF7421970F4BE004CDE32 /* assimp.h */,
+				CA0AF7431970F4BE004CDE32 /* assimp.hpp */,
+				CA0AF7441970F4BE004CDE32 /* Compiler */,
+				CA0AF7471970F4BE004CDE32 /* DefaultLogger.h */,
+				CA0AF7481970F4BE004CDE32 /* IOStream.h */,
+				CA0AF7491970F4BE004CDE32 /* IOSystem.h */,
+				CA0AF74A1970F4BE004CDE32 /* Logger.h */,
+				CA0AF74B1970F4BE004CDE32 /* LogStream.h */,
+				CA0AF74C1970F4BE004CDE32 /* NullLogger.h */,
+				CA0AF74D1970F4BE004CDE32 /* ProgressHandler.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CA0AF7441970F4BE004CDE32 /* Compiler */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF7451970F4BE004CDE32 /* poppack1.h */,
+				CA0AF7461970F4BE004CDE32 /* pushpack1.h */,
+			);
+			path = Compiler;
+			sourceTree = "<group>";
+		};
+		CA0AF74E1970F4BE004CDE32 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF74F1970F4BF004CDE32 /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CA0AF74F1970F4BF004CDE32 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AF7501970F4BF004CDE32 /* assimp.a */,
+			);
+			path = osx;
 			sourceTree = "<group>";
 		};
 		CA21089C196791F400D80677 /* ofxCv */ = {
@@ -803,9 +963,6 @@
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
-				CAED7DFD196CE0E800EF5094 /* cameraparameters.cpp */,
-				CAED7DFE196CE0E800EF5094 /* cameraparameters.h */,
-				CAED7DFF196CE0E800EF5094 /* exports.h */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 			);
 			path = src;
@@ -907,12 +1064,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2108CB196791F400D80677 /* ObjectFinder.cpp in Sources */,
+				CA0AF7521970F4BF004CDE32 /* ofxAssimpMeshHelper.cpp in Sources */,
 				CA2108CF196791F400D80677 /* Wrappers.cpp in Sources */,
 				CA21097719679B1900D80677 /* ofxCvFeaturesTracker.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				CA21097619679B1900D80677 /* PatternTracker.cpp in Sources */,
+				CA0AF7511970F4BF004CDE32 /* ofxAssimpAnimation.cpp in Sources */,
 				CA21094D1967920200D80677 /* ofxCvFloatImage.cpp in Sources */,
-				CAED7E00196CE0E800EF5094 /* cameraparameters.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				CA2108CA196791F400D80677 /* Helpers.cpp in Sources */,
 				CA2108C7196791F400D80677 /* ContourFinder.cpp in Sources */,
@@ -923,7 +1081,9 @@
 				CA21094F1967920200D80677 /* ofxCvHaarFinder.cpp in Sources */,
 				CA2108C9196791F400D80677 /* Flow.cpp in Sources */,
 				CA2108C6196791F400D80677 /* Calibration.cpp in Sources */,
+				CA0AF7531970F4BF004CDE32 /* ofxAssimpModelLoader.cpp in Sources */,
 				CA2108C8196791F400D80677 /* Distance.cpp in Sources */,
+				CA0AF7541970F4BF004CDE32 /* ofxAssimpTexture.cpp in Sources */,
 				CA2109501967920200D80677 /* ofxCvImage.cpp in Sources */,
 				CA2108C4196791F400D80677 /* ETF.cpp in Sources */,
 				CA21094E1967920200D80677 /* ofxCvGrayscaleImage.cpp in Sources */,
@@ -1170,11 +1330,12 @@
 					/Users/kikko/Dev/cpp/openFrameworks/git/addons/ofxOpenCv/libs/opencv/lib/vs,
 					/Users/kikko/Dev/cpp/openFrameworks/git/addons/ofxOpenCv/libs/opencv/lib/win_cb,
 					/Users/jessicapeter/Documents/openframeworks/addons/ofxOpenCv/libs/opencv/lib/osx,
+					/Users/jessicapeter/Documents/openframeworks/addons/ofxAssimpModelLoader/libs/assimp/lib/osx,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PREBINDING = NO;
 				PRODUCT_NAME = "example-feature-trackerDebug";
-				USER_HEADER_SEARCH_PATHS = "../../../addons/ofxCv/libs/ofxCv/include/ ../../../addons/ofxCv/libs/CLD/include/ ../../../addons/ofxOpenCv/libs/opencv/include/";
+				USER_HEADER_SEARCH_PATHS = "../../../addons/ofxCv/libs/ofxCv/include/ ../../../addons/ofxOpenCv/libs/opencv/include/ ../../../addons/ofxCv/libs/CLD/include/ ../../../addons/ofxAssimpModelLoader/libs/assimp/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1270,11 +1431,12 @@
 					/Users/kikko/Dev/cpp/openFrameworks/git/addons/ofxOpenCv/libs/opencv/lib/vs,
 					/Users/kikko/Dev/cpp/openFrameworks/git/addons/ofxOpenCv/libs/opencv/lib/win_cb,
 					/Users/jessicapeter/Documents/openframeworks/addons/ofxOpenCv/libs/opencv/lib/osx,
+					/Users/jessicapeter/Documents/openframeworks/addons/ofxAssimpModelLoader/libs/assimp/lib/osx,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PREBINDING = NO;
 				PRODUCT_NAME = "example-feature-tracker";
-				USER_HEADER_SEARCH_PATHS = "../../../addons/ofxCv/libs/ofxCv/include/ ../../../addons/ofxCv/libs/CLD/include/ ../../../addons/ofxOpenCv/libs/opencv/include/";
+				USER_HEADER_SEARCH_PATHS = "../../../addons/ofxCv/libs/ofxCv/include/ ../../../addons/ofxOpenCv/libs/opencv/include/ ../../../addons/ofxCv/libs/CLD/include/ ../../../addons/ofxAssimpModelLoader/libs/assimp/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -4,7 +4,8 @@
 #include "ofxCv.h"
 #include "ofxCvFeaturesTrackerThreaded.h"
 #include "ofxCvCameraProjectorCalibration.h"
-#include "cameraparameters.h"
+#include "ofxAssimpModelLoader.h"
+#include "ofVboMesh.h"
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 800
@@ -20,8 +21,6 @@ public:
     void exit();
     void keyPressed(int key);
 	
-    // draw with OpenCV projection method (slower but useful for debug)
-    void drawUsingCV();
     
     // draw using OpenGL projection directly
     void drawUsingGL();
@@ -30,7 +29,7 @@ public:
     
 //    cv::Point3d markerObjectPoints[4];
     vector<cv::Point3d> markerObjectPoints;
-     vector<cv::Point2d> imagePoints;
+    vector<cv::Point2d> imagePoints;
     void drawCube();
     
     ofImage img;
@@ -42,13 +41,13 @@ public:
     cv::Mat objPM;
     cv::Mat obj2;
     
-    cv::Size size;
-    double projMatrix[16];
-	float projfMatrix[16];
-    ofMatrix4x4 ofprojMatrix;
+
     
-    ofMatrix4x4 getProjectionMatrix();
-    	aruco::CameraParameters camParams;
+    
+    //Mesh Info
+     ofxAssimpModelLoader model;
+    ofMesh mesh;
+    ofLight	light;
     
     
     
@@ -75,7 +74,6 @@ private:
     cv::Mat rotObjToProj, transObjToProj;
     
     bool bDrawDebug;
-    bool bDrawWithCV;
     
     string getRTMatInfos(const cv::Mat rvecs, const cv::Mat tvecs);
     
